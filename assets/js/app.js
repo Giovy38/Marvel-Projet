@@ -55,7 +55,24 @@ async function onCall() {
 
       cardContainer.appendChild(singleCard);
 
-      console.log(hero.description);
+      // ----- ADDING HOVER EFFECT TO CARD -----------
+
+      border.addEventListener("mouseover", zoomImgIn);
+      border.addEventListener("mouseout", zoomImgOut);
+
+      function zoomImgIn() {
+        heroComics.style.visibility = "hidden";
+        heroSeries.style.visibility = "hidden";
+        heroStories.style.visibility = "hidden";
+        heroImg.style.minHeight = "400px";
+      }
+
+      function zoomImgOut() {
+        heroComics.style.visibility = "visible";
+        heroSeries.style.visibility = "visible";
+        heroStories.style.visibility = "visible";
+        heroImg.style.minHeight = "240px";
+      }
     });
   } catch (err) {
     console.log(err);
