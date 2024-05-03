@@ -20,6 +20,7 @@ async function onCall() {
       const heroComics = document.createElement("h3");
       const heroSeries = document.createElement("h3");
       const heroStories = document.createElement("h3");
+      const heroDescription = document.createElement("p");
 
       // assign class to all new elements
 
@@ -35,6 +36,12 @@ async function onCall() {
       heroSeries.innerHTML = `Series: <span>${hero.series.available}</span>`;
       heroStories.className = "stories hero-info";
       heroStories.innerHTML = `Stories: <span>${hero.stories.available}</span>`;
+      heroDescription.className = "hero-description";
+      if (hero.description !== "") {
+        heroDescription.innerHTML = `<b>Description:</b> <br>${hero.description}`;
+      } else {
+        heroDescription.innerHTML = `<b>Description:</b> <br>No description found for this hero`;
+      }
 
       singleCard.appendChild(border);
       border.appendChild(heroName);
@@ -42,6 +49,7 @@ async function onCall() {
       border.appendChild(heroComics);
       border.appendChild(heroSeries);
       border.appendChild(heroStories);
+      border.appendChild(heroDescription);
 
       const cardContainer = document.getElementById("card-container");
 
