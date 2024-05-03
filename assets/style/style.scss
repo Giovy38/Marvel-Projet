@@ -1,0 +1,98 @@
+@import './utilies';
+@import './colors';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#hero-section{
+    #hero-container{
+        .logo-container{
+            @include flexCenter;
+            padding: 20px 0;
+            background-color: $logo-bg;
+            #logo{
+                width: 20vw;
+            }
+        }
+
+        .sub-section-container{
+            
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url('/assets/img/marvel-comics.jpeg'); 
+            padding: 10px;
+
+            #subtitle{
+                margin: 20px 0;
+                padding: 5px;
+                font-family: 'Marvel';
+                font-size: 50px;
+                color: white;
+                box-shadow: 2px 2px 2px 2px black;
+                background: linear-gradient(  #ffffffa3,#d80606c7);
+            }
+
+            #card-container {
+
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 20px;
+                
+
+               .single-card{
+
+                background: white;
+                border-radius: 10px;
+                padding: 10px;
+                box-shadow: 2px 2px 2px 2px black;
+                min-height: 395px;
+
+                &:hover{
+                    background: rgba(202, 202, 202, 0.753);
+                }
+
+                .border{
+                    border-radius:10px;
+                    background: transparent;
+                    padding: 5px;
+                    height: 100%;
+
+                    &:hover{
+                        border: 1px solid black;
+                    }
+                }
+
+                .hero-name{
+                    font-family: 'Marvel';
+                    text-align: center;
+                }
+
+                .hero-img{
+                    min-width: 200px;
+                    max-width: 250px;
+                    border-radius: 10px;
+                    min-height: 240px;
+                }
+
+                .hero-info{
+                    font-family: 'Marvel';
+                    text-transform: uppercase;
+                    margin: 5px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    border-bottom: 1px solid black;
+                }
+               }
+            }
+        }
+    }
+}
+  
+ 
