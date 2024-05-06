@@ -61,7 +61,6 @@
                 max-width: 330px;
 
                 &:hover{
-                    // background: rgba(202, 202, 202, 0.753);
                     background: linear-gradient(  #ffffffa3,#ffffff);
                 }
 
@@ -73,6 +72,7 @@
 
                     &:hover{
                         border: 1px solid black;
+                        overflow: hidden;
                     }
                 }
 

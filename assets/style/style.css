@@ -61,6 +61,7 @@
 }
 #hero-section #hero-container .sub-section-container #card-container .single-card .border:hover {
   border: 1px solid black;
+  overflow: hidden;
 }
 #hero-section #hero-container .sub-section-container #card-container .single-card .hero-name {
   font-family: "Marvel";

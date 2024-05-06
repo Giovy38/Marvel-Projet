@@ -64,17 +64,17 @@ async function onCall() {
         heroComics.style.visibility = "hidden";
         heroSeries.style.visibility = "hidden";
         heroStories.style.visibility = "hidden";
-        heroImg.style.minHeight = "400px";
+        heroImg.style.transform = "scale(1.5)";
       }
 
       function zoomImgOut() {
         heroComics.style.visibility = "visible";
         heroSeries.style.visibility = "visible";
         heroStories.style.visibility = "visible";
-        heroImg.style.minHeight = "240px";
+        heroImg.style.transform = "scale(1)";
       }
     });
   } catch (err) {
-    console.log(err);
+    alert(err);
   }
 }
